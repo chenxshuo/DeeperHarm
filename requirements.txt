@@ -1,0 +1,16 @@
+torch==2.5.1
+transformers==4.46.1
+sentencepiece==0.2.0
+vllm==0.6.4
+tqdm==4.67.0
+nltk==3.9.1
+pyext==0.7
+python-dotenv==1.1.0
+beautifulsoup4==4.12.3
+rank_bm25
+langid
+ipdb
+pdfplumber
+chardet
+langid
+setuptools
