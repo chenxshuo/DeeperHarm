@@ -40,7 +40,7 @@ DeeperHarm is a comprehensive red-teaming research framework derived from WebThi
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone https://github.com/chenxshuo/DeeperHarm
 cd DeeperHarm
 
 # Run the setup script
@@ -297,10 +297,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 If you use this framework in your research, please cite:
 
 ```bibtex
-@misc{,
-  title={},
-  author={},
-  year={},
-  url={https://github.com/...}
+@article{chen2025deep,
+  title={Deep Research Brings Deeper Harm},
+  author={Chen, Shuo and Li, Zonggen and Han, Zhen and He, Bailan and Liu, Tong and Chen, Haokun and Groh, Georg and Torr, Philip and Tresp, Volker and Gu, Jindong},
+  journal={arXiv preprint arXiv:2510.11851},
+  year={2025}
 }
 ```
