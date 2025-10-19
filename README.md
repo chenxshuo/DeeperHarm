@@ -1,8 +1,8 @@
-# DeHARM: Deep Research Red Team Framework
+# DeeperHarm: Deep Research Red Team Framework
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-DeHARM is a comprehensive red-teaming research framework derived from WebThinker, designed to evaluate and analyze the security aspects of large language models through various attack methods and evaluation metrics. The framework implements multiple attack strategies and provides extensive evaluation capabilities.
+DeeperHarm is a comprehensive red-teaming research framework derived from WebThinker, designed to evaluate and analyze the security aspects of large language models through various attack methods and evaluation metrics. The framework implements multiple attack strategies and provides extensive evaluation capabilities.
 
 ## Features
 
@@ -41,7 +41,7 @@ DeHARM is a comprehensive red-teaming research framework derived from WebThinker
 ```bash
 # Clone the repository
 git clone <repository-url>
-cd DeHARM
+cd DeeperHarm
 
 # Run the setup script
 bash setup_env.sh
@@ -93,7 +93,7 @@ python scripts/IntentHijack_run_web_thinker_report_brave_search.py \
 
 ```bash
 python scripts/DirectlyDR.py \
-   --dataset_name DeHARM \
+   --dataset_name DeeperHarm \
    --split DeepREJECT \
    --concurrent_limit 32 \
    --api_base_url "http://localhost:8000/v1" \
@@ -106,7 +106,7 @@ python scripts/DirectlyDR.py \
 
 ```bash
 python scripts/PlanInjection_run_web_thinker_report_brave_search.py \
-    --dataset_name DeHARM \
+    --dataset_name DeeperHarm \
     --split PlanInjection \
     --concurrent_limit 32 \
     --api_base_url "http://localhost:8000/v1" \
@@ -120,7 +120,7 @@ python scripts/PlanInjection_run_web_thinker_report_brave_search.py \
 
 ```bash
 python scripts/IntentHijack_run_web_thinker_report_brave_search.py \
-    --dataset_name DeHARM \
+    --dataset_name DeeperHarm \
     --split IntentHijack \
     --concurrent_limit 32 \
     --api_base_url "http://localhost:8000/v1" \
@@ -151,7 +151,7 @@ python scripts/evaluate/evaluate_strongreject_baseline.py \
 #### WebThinker Reports
 ```bash
 python scripts/evaluate/evaluate_strongreject.py \
-    --markdown_dir "outputs/DeHARM.QwQ-32B/markdown.IntentHijack" \
+    --markdown_dir "outputs/DeeperHarm.QwQ-32B/markdown.IntentHijack" \
     --output_dir ""  # default: markdown_dir
 ```
 
@@ -160,18 +160,18 @@ python scripts/evaluate/evaluate_strongreject.py \
 #### LLM Baseline Outputs
 ```bash
 python scripts/evaluate/evaluate_deepreject_baseline.py \
-    --markdown_dir "outputs/DeHARM.QwQ-32B/markdown.DeepREJECT" \
+    --markdown_dir "outputs/DeeperHarm.QwQ-32B/markdown.DeepREJECT" \
     --output_dir "outputs/baseline/qwq-32b" \
-    --metrics_file "outputs/DeHARM.QwQ-32B/markdown.DeepREJECT/eval_metrics.csv" \
+    --metrics_file "outputs/DeeperHarm.QwQ-32B/markdown.DeepREJECT/eval_metrics.csv" \
     --baseline_file "outputs/baseline/qwq-32b/strongreject_baseline.json"
 ```
 
 #### WebThinker Reports
 ```bash
 python scripts/evaluate/evaluate_deepreject.py \
-    --markdown_dir "outputs/DeHARM.QwQ-32B/markdown.DeepREJECT" \
+    --markdown_dir "outputs/DeeperHarm.QwQ-32B/markdown.DeepREJECT" \
     --output_dir "" \
-    --dataset "data/DeHARM/DeepREJECT.json"
+    --dataset "data/DeeperHarm/DeepREJECT.json"
 ```
 
 ### 3. Refusal Words Analysis
@@ -179,7 +179,7 @@ python scripts/evaluate/evaluate_deepreject.py \
 #### For WebThinker Reports
 ```bash
 python scripts/evaluate/evaluate_refusal_words.py \
-    --markdown_dir "outputs/DeHARM.QwQ-32B/markdown.IntentHijack" \
+    --markdown_dir "outputs/DeeperHarm.QwQ-32B/markdown.IntentHijack" \
     --output_dir "" \
     --metrics_file "" \
     --baseline_file ""
@@ -188,7 +188,7 @@ python scripts/evaluate/evaluate_refusal_words.py \
 #### For Lower ASR Models
 ```bash
 python scripts/evaluate/evaluate_refusal_words.py \
-    --markdown_dir "outputs/DeHARM.QwQ-32B/markdown.IntentHijack" \
+    --markdown_dir "outputs/DeeperHarm.QwQ-32B/markdown.IntentHijack" \
     --output_dir "" \
     --metrics_file "" \
     --baseline_file "" \
@@ -200,7 +200,7 @@ python scripts/evaluate/evaluate_refusal_words.py \
 #### WebThinker Reports
 ```bash
 python scripts/evaluate/evaluate_llm_judge.py \
-    --markdown_dir "outputs/DeHARM.QwQ-32B/markdown.IntentHijack" \
+    --markdown_dir "outputs/DeeperHarm.QwQ-32B/markdown.IntentHijack" \
     --output_dir "" \
     --metrics_file "" \
     --baseline_file ""
@@ -211,7 +211,7 @@ python scripts/evaluate/evaluate_llm_judge.py \
 #### WebThinker Reports
 ```bash
 python scripts/evaluate/evaluate_llama_guard.py \
-    --markdown_dir "outputs/DeHARM.QwQ-32B/markdown.IntentHijack" \
+    --markdown_dir "outputs/DeeperHarm.QwQ-32B/markdown.IntentHijack" \
     --output_dir "" \
     --metrics_file "" \
     --baseline_file ""
@@ -220,8 +220,8 @@ python scripts/evaluate/evaluate_llama_guard.py \
 ## Project Structure
 
 ```
-DeHARM/
-├── data/DeHARM/                 # Dataset files
+DeeperHarm/
+├── data/DeeperHarm/                 # Dataset files
 │   ├── DeepREJECT.json
 │   ├── IntentHijack.json
 │   ├── PlanInjection.json
@@ -266,7 +266,7 @@ DeHARM/
 4. **Run Full Evaluation**:
    ```bash
    python scripts/evaluate/evaluate_strongreject.py \
-      --markdown_dir "outputs/DeHARM.QwQ-32B/markdown.IntentHijack" \
+      --markdown_dir "outputs/DeeperHarm.QwQ-32B/markdown.IntentHijack" \
       --output_dir ""
    ```
 
